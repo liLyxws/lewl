@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sign up</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+   
+    .left {
+        height: 100vh;
+    }
+
+    .logo {
+        font-size: 26px;
+        font-weight: bold;
+        color: #1834e8;
+        margin-bottom: 40px;
+        align-self: flex-start;
+        margin-left: 25%;
+    }
+
+    .provider-btn {
+        padding: 12px;
+        border: 1px solid #dadada;
+        background: #fff;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        cursor: pointer;
+      }
+
+    .provider-btn:hover {
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15); 
+        transform: translateY(-2px); 
+        background-color: #f5f5f5; 
+    }
+
+  
+
+    /* RIGHT SIDE */
+    .right {
+        height: 100vh;
+        
+    }
+
+    .phone {
+        width: 300px;
+        height: 600px;
+        border-radius: 35px;
+        background-color: white;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        position: relative;
+        
+    }
+
+    .screen1 {
+        width: 94%;
+        height: 97%;
+        margin: auto;
+        margin-top: 8px;
+        border-radius: 35px;
+        background: linear-gradient(to bottom,
+            #111111 0%, #2b2b2b 10%,
+            #d9fdd3 40%, #b9e6b0 65%,
+            #f9f9f9 0%, #2b2b2b 10%);
+        padding: 15px;
+        overflow-y: auto;
+        position: relative;
+        
+        
+    }
+
+    .screen {
+        width: 112%;
+        background: linear-gradient(135deg, #4682B4, #87CEEB); 
+        border-radius: 35px;
+        padding: 20px;
+        overflow-y: auto;
+        position: relative;
+        margin-left: -5.5%;
+    }
+
+    .exit-icon {
+        font-size: 22px;
+        color: #333;
+        position: absolute;
+        left: 20px;
+        top: 15px;
+        cursor: pointer;
+        z-index: 50;
+    }
+
+    .task-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
+        padding: 10px;
+        margin-bottom: 12px;
+    }
+
+    .task-title {
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 2px;
+    }
+
+    .red-container {
+        width: 50vw;
+        height: 100%;
+        background: linear-gradient(135deg,
+            rgba(103, 190, 220, 0.95),
+            rgba(135, 206, 250, 0.2));
+        box-shadow: 0 0 100px rgba(103,190,220,.25),
+                    0 0 150px rgba(135,206,250,.2);
+        
+    }
+
+    
+    .voice-section {
+        margin-top: 25px;
+        text-align: center;
+    }
+    .voice-text {
+        font-size: 12px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 15px;
+    }
+    .mic-icon {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        box-shadow: 0px 3px 8px rgba(0,0,0,0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    .mic-icon i {
+        color: rgb(255, 70, 70);
+        font-size: 22px;
+    }
+
+    @media (max-width: 767px) {
+      .logo {
+        margin-left: 0; 
+        text-align: center; 
+        align-self: center; 
+      }
+}
+  </style>
+</head>
+
+<body>
+
+<div class="container-fluid h-100">
+  <div class="row h-100">
+
+<!-- LEFT SIDE -->
+    <aside class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-start left py-5">
+
+      <h1 class="logo ms-6">toDone!</h1>
+      <h2 class="fw-bold mb-4">Welcome back!</h2>
+
+      <section class="w-100" style="max-width: 450px;">
+
+        <button class="provider-btn w-100 mb-2">
+          <i class="fab fa-google me-2"></i> Continue with Google
+        </button>
+        <button class="provider-btn w-100 mb-2">
+          <i class="fab fa-facebook-f me-2"></i> Continue with Facebook
+        </button>
+        <button class="provider-btn w-100 mb-3">
+          <i class="fab fa-apple me-2"></i> Continue with Apple
+        </button>
+
+        <hr>
+
+        <form class="mt-2">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-control mb-2" placeholder="Enter your Username">
+
+          <label class="form-label">Email address </label>
+          <input type="email" class="form-control mb-2" placeholder="Enter your email address">
+
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control mb-3" placeholder="Enter your password">
+
+          <button class=" btn btn-primary w-100 py-2">Sign up</button>
+        </form>
+
+        
+
+        <p class="mt-3 small">
+          By continuing with Google, Apple, or Email, you agree to Todoe's
+          <span class="text-danger">Terms of Service</span> and
+          <span class="text-danger">Privacy Policy.</span>
+        </p>
+
+        <hr>
+
+        <p class="text-center small mt-3">
+          Already signed up?  <a href="login.html" class="text-danger">Go to login</a>
+        </p>
+
+      </section>
+    </aside>
+
+<!-- RIGHT SIDE -->
+    <main class="col-6 d-none d-md-flex justify-content-center align-items-center right">
+
+      <div class="red-container d-flex justify-content-center align-items-center">
+
+        <div class="phone d-flex justify-content-center align-items-center">
+          <section class="screen1">
+
+            
+            <div class="status-bar d-flex justify-content-between text-white mb-2">
+              <span>9:41</span>
+              <div>
+                <i class="fas fa-signal mx-1"></i>
+                <i class="fas fa-wifi mx-1"></i>
+                <i class="fas fa-battery-three-quarters mx-1"></i>
+              </div>
+            </div>
+
+            
+            <article class="screen p-3">
+
+           
+              <div class="screen-header">
+                <i class="fas fa-arrow-left exit-icon"></i>
+              </div>
+
+              <h2 class="fw-bold text-center mb-4 mt-4">toDo's</h2>
+
+              
+              <div class="task-card">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="far fa-circle"></i>
+                  <p class="task-title mb-2">Finish all projects</p>
+                </div>
+                <span class="task-meta small text-muted ">Thursday · Work</span>
+              </div>
+
+              <div class="task-card">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="far fa-circle"></i>
+                  <p class="task-title mb-2">Schedule team sync</p>
+                </div>
+                <span class="task-meta small">Thursday · Work</span>
+              </div>
+
+              <div class="task-card">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="far fa-circle"></i>
+                  <p class="task-title mb-2">Buy milk after work</p>
+                </div>
+                <span class="task-meta small">Today · Inbox</span>
+              </div>
+
+              
+              <section class="voice-section ">
+                <p class="voice-text ">Listening...<br>Say everything you need to get done.</p>
+                <div class="mic-icon mb-2">
+                  <i class="fas fa-microphone "></i>
+                </div>
+              </section>
+
+            </article>
+          </section>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+</div>
+
+</body>
+</html>
